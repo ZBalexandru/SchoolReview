@@ -865,6 +865,31 @@ public class MainPanelAdmin extends JFrame{
 					}
 				);
 				textFieldFilter.setColumns(10);
+				
+				JButton btnNewButton_2 = new JButton("<html> Reimprospatare <br/> Informatii </html>");
+				btnNewButton_2.addMouseListener(new MouseAdapter() {
+					public void mouseClicked(MouseEvent arg0) {
+						ResultSet rs;
+						comboBox.removeAllItems();
+						comboBoxClasa.removeAllItems();
+						try {
+							rs = st.executeQuery("show tables in scoala");
+							while(rs.next()) {
+						    	comboBox.addItem(rs.getString("Tables_in_scoala").toUpperCase());
+						    	comboBoxClasa.addItem(rs.getString("Tables_in_scoala").toUpperCase());
+						    }
+						    rs.close();
+						} catch (SQLException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+					}
+				});
+				btnNewButton_2.setFont(new Font("Bahnschrift", Font.BOLD, 14));
+				btnNewButton_2.setIcon(new ImageIcon(MainPanelAdmin.class.getResource("/images/assets/icons8_refresh_40px_4.png")));
+				btnNewButton_2.setBounds(29, 11, 185, 43);
+				MainPanelElev.add(btnNewButton_2);
 				tglbtnVeziElevi.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						try {
