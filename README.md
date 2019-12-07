@@ -61,6 +61,8 @@ Third:
  USER : <i>administrator</i> <br/>
  PASS : <i>administrator</i> <br/><br/>
  
+ AND THEN if you want to review a teacher you just added from the administrator panel, please register in the MAIN LOGIN PANEL and then LOG IN with those details !
+ 
   Thank you for taking your precious time reading this, Zubas Bogdan.
  
  <html>
